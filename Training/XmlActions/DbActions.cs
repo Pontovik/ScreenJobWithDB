@@ -53,6 +53,7 @@ namespace ScreenJob.XmlActions
                     else
                     {
                         InsertIntoOrder(db, newOrder,user_id);
+                        order_id = FindOrderByNumber(db, newOrder);
                     }
                     for(int j = 0; j < newOrder.BuyProducts.Count; j++)
                     {
@@ -71,7 +72,7 @@ namespace ScreenJob.XmlActions
 
         private static void InsertIntoOrder(AppDbContext db, Order newOrder, int user_id)
         {
-            db.Database.ExecuteSql($"INSERT INTO [Order](order_id,order_reg_date,order_number,order_sum,user_id) VALUES ({newOrder.OrderRegDate}, {newOrder.OrderNumber}, {newOrder.OrderSum}, {user_id})");
+            db.Database.ExecuteSql($"INSERT INTO [Order](order_reg_date,order_number,order_sum,user_id) VALUES ({newOrder.OrderRegDate}, {newOrder.OrderNumber}, {newOrder.OrderSum}, {user_id})");
         }
         private static int FindOrderByNumber(AppDbContext db, Order newOrder)
         {
