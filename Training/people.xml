@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<People>
+	<Person>
+		<Name>Tom</Name>
+		<Age>29</Age>
+		<Company>Microsoft</Company>
+	</Person>
+	<Person>
+		<Name>Bill</Name>
+		<Age>29</Age>
+		<Company>Microsoft</Company>
+	</Person>
+</People>
